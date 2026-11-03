@@ -13,6 +13,8 @@ bpp = v.BitsPerPixel;
 Duration = v.Duration;
 framerate = v.FrameRate;
 num_frames = v.NumFrames;
+height = v.Height;
+width = v.Width;
 
 tag = v.Tag;
 
@@ -21,6 +23,8 @@ fprintf('Duracion = %d\n', Duration);
 fprintf('framerate = %d\n', framerate);
 fprintf('nummero de frames = %d\n', num_frames);
 fprintf('tag = %d\n', tag);
+fprintf('height = %d\n', height);
+fprintf('width = %d\n', width);
 
 %% Lectura y reproducci´on de un video en formato mpeg
 % Precarga la estructura de datos.
