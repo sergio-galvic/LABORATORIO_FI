@@ -5,7 +5,7 @@ clear all;
 vidObj = VideoReader('testVideo.mpg');
 s = struct('cdata', zeros(vidObj.Height, vidObj.Width, 3,'uint8'),'colormap', []);
 numFrames = 0;
-nframes=10;
+nframes=200;
 Duration=vidObj.CurrentTime;
 while numFrames<nframes
     numFrames = numFrames + 1;
@@ -17,14 +17,14 @@ n=vidObj.Width;
 %%
 vf=[];
 %Repetición 10 veces de la primera imagen
-  for i=1:nframes
-      vf=[vf im2col(rgb2gray(s(1).cdata)',[1 1],'distinct')];
-  end
+  %for i=1:nframes
+     %vf=[vf im2col(rgb2gray(s(1).cdata)',[1 1],'distinct')];
+  %end
 %Trasponer frame para que el im2col lea por filas
 %Primeros 10 frames
- %for i=1:nframes
-  %   vf=[vf im2col(rgb2gray(s(i).cdata)',[1 1],'distinct')];
- %end
+ for i=1:nframes
+     vf=[vf im2col(rgb2gray(s(i).cdata)',[1 1],'distinct')];
+ end
 
 %%
  fimagen= vidObj.FrameRate     % es el framerate
