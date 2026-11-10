@@ -27,9 +27,9 @@ vf=[];
  end
 
 %%
- fimagen= vidObj.FrameRate     % es el framerate
- flinea= fimagen * m   % fimagen * height
- fs=  flinea * n    % flinea * width o framerate * height * width
+ fimagen = vidObj.FrameRate     % es el framerate
+ flinea = fimagen * m   % fimagen * height
+ fs =  flinea * n    % flinea * width o framerate * height * width
 Ts=1/fs;
 t=0:Ts:(nframes/fimagen-Ts);
 Vf=1/fs*fftshift(abs(fft(vf)));
